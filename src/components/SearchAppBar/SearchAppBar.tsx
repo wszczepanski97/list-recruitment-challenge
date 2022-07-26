@@ -2,7 +2,7 @@ import { styled, alpha } from "@mui/material/styles";
 import { AppBar, Box, InputBase, Toolbar, Typography } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import { useContext } from "react";
-import { AppContext } from "../../App";
+import { AppContext } from "../../contexts";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -65,7 +65,6 @@ export default function SearchAppBar() {
       </AppBar>
       <Search
         onChange={(e) => {
-          console.log(e.target.value);
           setDataSearch(
             data.filter((contact) =>
               contact.name.toLowerCase().includes(e.target.value.toLowerCase())

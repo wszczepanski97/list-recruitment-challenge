@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { ListItemButton } from "@mui/material";
 import {
   ContactListItemButtonAvatar,
@@ -6,7 +6,7 @@ import {
   ContactListItemButtonText,
 } from "./components";
 import { VirtualListContext } from "../../../../../VirtualList/contexts";
-import { AppContext } from "../../../../../../App";
+import { AppContext } from "../../../../../../contexts";
 
 const ContactListItemButton = () => {
   const { checked, setChecked } = useContext(AppContext);

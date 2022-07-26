@@ -1,19 +1,9 @@
-import { createContext, useState } from "react";
+import { useState } from "react";
 import "normalize.css";
 import "./App.css";
 import { ContactList, SearchAppBar, VirtualList } from "./components";
-import { MergedNameContact } from "./components/VirtualList/types";
-
-type AppContextType = {
-  data: MergedNameContact[];
-  setData(data: MergedNameContact[]): void;
-  dataSearch: MergedNameContact[];
-  setDataSearch(dataSearch: MergedNameContact[]): void;
-  checked: number[];
-  setChecked(checkedArr: number[]): void;
-};
-
-export const AppContext = createContext<AppContextType>({} as AppContextType);
+import { MergedNameContact } from "./types";
+import { AppContext } from "./contexts";
 
 const App = () => {
   const [data, setData] = useState<MergedNameContact[]>(

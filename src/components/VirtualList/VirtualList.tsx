@@ -8,7 +8,7 @@ import {
 } from "./helpers/data-clean-helper";
 import { API_URL, SEARCH_APP_BAR_HEIGHT } from "./constants";
 import { VirtualListContext } from "./contexts";
-import { AppContext } from "../../App";
+import { AppContext } from "../../contexts";
 
 type VirtualListProps = VirtualListAutoSizerDimensions & {
   children: ReactNode;
